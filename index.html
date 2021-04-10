@@ -20,7 +20,10 @@
 
     <script>
         function getTimeRemaining(){        
-            var total = Math.abs(Date.parse('April 14 2021') - Date.parse(new Date()));
+            var startDate = Date.parse('04/14/2021 17:00:00');
+            var endDate = new Date();
+
+            var total = Math.abs(startDate - endDate);
             var seconds = Math.floor( (total/1000) % 60 );
             var minutes = Math.floor( (total/1000/60) % 60 );
             var hours = Math.floor( (total/(1000*60*60)) % 24 );
